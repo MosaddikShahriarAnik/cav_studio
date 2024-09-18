@@ -1,0 +1,85 @@
+/* banner.css */
+.circular-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.circular-text-wrapper {
+    box-sizing: border-box;
+    border-radius: 50%; /* Makes it a circle */
+    position: relative;
+    width: 230px; /* Default size */
+    height: 230px; /* Default size */
+    background-color: #14141F;
+    margin-top: 65px;
+    margin-left: 45px;
+    margin-right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(82, 82, 128);
+    overflow: hidden;
+    display: grid; /* Ensure the content doesn’t overflow */
+}
+
+/* Circle container that holds the text */
+.circle {
+    height: 170px; /* Default size */
+    width: 170px; /* Default size */
+    border-radius: 50%; /* Makes it a circle */
+    background-color: rgb(82, 82, 128);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The image or text inside the circle */
+.circle img {
+    width: 100%; /* Adjust to fit the circle */
+    height: auto;
+    animation: textRotation 8s linear infinite;
+}
+
+/* Animation for rotating text/image */
+@keyframes textRotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .circular-text-wrapper {
+        width: 180px; /* Adjusted size for smaller screens */
+        height: 180px; /* Adjusted size for smaller screens */
+        margin-top: 45px;
+        margin-left: 20px; /* Reduced margin for smaller screens */
+        margin-right: 20px; /* Added margin for balance */
+    }
+
+    .circle {
+        height: 130px; /* Adjusted size for smaller screens */
+        width: 130px; /* Adjusted size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .circular-text-wrapper {
+        width: 150px; /* Further adjusted size for very small screens */
+        height: 150px; /* Further adjusted size for very small screens */
+        margin-top: 30px;
+        margin-left: 10px; /* Reduced margin for very small screens */
+        margin-right: 10px; /* Added margin for balance */
+    }
+
+    .circle {
+        height: 100px; /* Further adjusted size for very small screens */
+        width: 100px; /* Further adjusted size for very small screens */
+    }
+}
